@@ -1,2 +1,6 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Hello There!</h1>
+<p>
+	I'm a developer in Phoenix, AZ with a background in mostly Python, and JavaScript. Curently
+	learning Svelte. If you have interesting projects or work, send me an
+	<a href="mailto:luismiguelluna@gmail.com">email</a> and we can talk. Thanks for visiting!
+</p>
