@@ -1,18 +1,44 @@
 <script lang="ts">
-	import Project from './Project.svelte';
 	import type { PageData } from './$types';
+	import Project from './Project.svelte';
 
 	export let data: PageData;
+
+	const projects = [
+		{
+			name: 'LuisMiguelLuna.com',
+			desc: 'This website. Currently being built with HTML, CSS, JS, and Svelte. Deployed using GitHub and Netlify.',
+			link: 'https://luismiguelluna.com',
+			github: 'https://github.com/LML013/lml-main'
+		},
+
+		{
+			name: 'Green Saber Games',
+			desc: 'Tabletop gaming blog & content hub made with Wordpress.',
+			link: 'https://greensabergames.com'
+		},
+		{
+			name: 'Phoenix Squadron',
+			desc: 'Splash page for information about playing Star Wars X-wing in the Phoenix Area',
+			link: 'https://phoenixsquadronaz.com',
+			github: 'https://github.com/LML013/phoenix-nest'
+		},
+		{
+			name: 'Loruki',
+			desc: "An implementation of Brad Traversy's Build a Responsive Website | HTML, CSS Grid, Flexbox & More tutorial video. Deployed using GitHub and Netlify.",
+			link: 'https://luismiguelluna.com',
+			github: 'https://github.com/LML013/loruki-website'
+		}
+	];
 </script>
 
 <svelte:head>
-	<title>Portfolio</title>
-	<meta name="description" content="Luis Miguel Luna's Portfolio Projects" />
+	<title>Projects</title>
+	<meta name="description" content="Luis Miguel Luna's Projects" />
 </svelte:head>
 
 <section>
-	<Project projectName={data.projects[0].name} desc={data.projects[0].description} />
-	<Project projectName={data.projects[1].name} desc={data.projects[1].description} />
-	<Project projectName={data.projects[2].name} desc={data.projects[2].description} />
-	<Project projectName={data.projects[3].name} desc={data.projects[3].description} />
+	{#each projects as project}
+		<Project {...project} />
+	{/each}
 </section>
